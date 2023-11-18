@@ -1,0 +1,186 @@
+﻿<Page
+    x:Class="YaMoCodeLibrary.Pages.PaidSupportPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:YaMoCodeLibrary.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="PaidSupportPage"
+    d:DesignHeight="700"
+    d:DesignWidth="1000"
+    Background="{x:Null}"
+    mc:Ignorable="d">
+    <Border Background="White" CornerRadius="0 0 10 0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <!--  标题行  -->
+            <StackPanel
+                Grid.Row="0"
+                Margin="20,50,20,20"
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <Label
+                    VerticalContentAlignment="Center"
+                    Content="赞助与支持"
+                    FontFamily="/Assets/font/#Alimama DaoLiTi"
+                    FontSize="40" />
+                <Image
+                    Width="48"
+                    Height="48"
+                    Source="/Assets/icon/fly.png" />
+            </StackPanel>
+            <!--  赞助选项行  -->
+            <StackPanel
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+                <Border Style="{StaticResource MouseTriggerStyle}">
+                    <StackPanel
+                        Margin="20,0,20,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        Orientation="Vertical">
+                        <Image Source="/Assets/icon/nopaid.png" />
+                        <Label
+                            HorizontalAlignment="Center"
+                            Content="白嫖"
+                            FontFamily="/Assets/font/#Alimama DaoLiTi"
+                            FontSize="20" />
+                        <Label
+                            HorizontalAlignment="Center"
+                            Content="( 0 RMB )"
+                            FontFamily="/Assets/font/#Orbitron Medium"
+                            FontSize="13"
+                            Foreground="#1967D2" />
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource MouseTriggerStyle}">
+                    <StackPanel
+                        Margin="20,0,20,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        Orientation="Vertical">
+                        <Image Source="/Assets/icon/smallsupport.png" />
+                        <Label
+                            HorizontalAlignment="Center"
+                            Content="中杯支持"
+                            FontFamily="/Assets/font/#Alimama DaoLiTi"
+                            FontSize="20" />
+                        <Label
+                            HorizontalAlignment="Center"
+                            Content="( 5 RMB )"
+                            FontFamily="/Assets/font/#Orbitron Medium"
+                            FontSize="13"
+                            Foreground="#1967D2" />
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource MouseTriggerStyle}">
+                    <StackPanel
+                        Margin="20,0,20,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        Orientation="Vertical">
+                        <Image Source="/Assets/icon/midumsupport.png" />
+                        <Label
+                            HorizontalAlignment="Center"
+                            Content="大杯支持"
+                            FontFamily="/Assets/font/#Alimama DaoLiTi"
+                            FontSize="20" />
+                        <Label
+                            HorizontalAlignment="Center"
+                            Content="( 15 RMB )"
+                            FontFamily="/Assets/font/#Orbitron Medium"
+                            FontSize="13"
+                            Foreground="#1967D2" />
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource MouseTriggerStyle}">
+                    <StackPanel
+                        Margin="20,0,20,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        Orientation="Vertical">
+                        <Image Source="/Assets/icon/bigsupport.png" />
+                        <Label
+                            HorizontalAlignment="Center"
+                            Content="超大杯支持"
+                            FontFamily="/Assets/font/#Alimama DaoLiTi"
+                            FontSize="20" />
+                        <Label
+                            HorizontalAlignment="Center"
+                            Content="( 25 RMB )"
+                            FontFamily="/Assets/font/#Orbitron Medium"
+                            FontSize="13"
+                            Foreground="#1967D2" />
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+            <!--  玩笑话  -->
+            <Label
+                Grid.Row="2"
+                Margin="20,5,20,0"
+                HorizontalAlignment="Center"
+                VerticalContentAlignment="Center"
+                Content="不挣钱，交个朋友!!!"
+                FontFamily="/Assets/font/#Alimama DaoLiTi"
+                FontSize="30" />
+            <!--  充值说明  -->
+            <Border
+                Grid.Row="3"
+                Width="800"
+                Margin="0,10,0,0"
+                HorizontalAlignment="Center"
+                BorderBrush="#E4E4E4"
+                BorderThickness="0,0,0,1" />
+            <StackPanel
+                Grid.Row="4"
+                Margin="95,5,0,5"
+                Orientation="Vertical">
+                <Label
+                    Content="具体说明"
+                    FontSize="13"
+                    Foreground="Gray" />
+                <Label
+                    Margin="10,0,0,1"
+                    Content="白嫖：虽然你白嫖了!!! 但是你仍可以通过 码粒 的本地存储功能享受全部功能，期待你的支持。"
+                    FontSize="12"
+                    Foreground="Gray" />
+                <Label
+                    Margin="10,0,0,1"
+                    Content="中杯：您将获得 玛粒 的云存储、CDN加速，以及支持最多15个代码库，最多2000个代码块。"
+                    Foreground="Gray" />
+                <Label
+                    Margin="10,0,0,1"
+                    Content="大杯：尊敬的朋友您获得 码粒 的全部功能，相较于[中杯]，代码库与代码块将无限制存储。"
+                    Foreground="Gray" />
+                <Label
+                    Margin="10,0,0,1"
+                    Content="超大杯：您已经无敌了，YaMo Studio的软件产品将全部为您服务，包括码粒、DevTool、AIGCTool等软件的使用资格。并且可获得相关SDK支持。"
+                    Foreground="Gray" />
+                <Label
+                    Content="其他产品说明"
+                    FontSize="13"
+                    Foreground="Gray" />
+                <Label
+                    Margin="10,0,0,1"
+                    Content="DevTool：您将获得OCR、图像处理、数字信号、NLP等技术支持"
+                    Foreground="Gray" />
+                <Label
+                    Margin="10,0,0,1"
+                    Content="AIGCTool：您将获得仿生智能体、图像风格化、图像超分重建、图像风格、声学重建等技术支持"
+                    Foreground="Gray" />
+            </StackPanel>
+        </Grid>
+    </Border>
+
+</Page>

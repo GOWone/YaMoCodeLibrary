@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC24BC19-1A4D-49B3-8217-A3AFCB4890B0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YaMoCodeLibrary</RootNamespace>
+    <AssemblyName>YaMoCodeLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DSPLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DSPLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Models\LibCodeBlockModel.cs" />
+    <Compile Include="Models\SettingModel.cs" />
+    <Compile Include="Pages\CodeBlockPage.xaml.cs">
+      <DependentUpon>CodeBlockPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CodeLibraryPage.xaml.cs">
+      <DependentUpon>CodeLibraryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PaidSupportPage.xaml.cs">
+      <DependentUpon>PaidSupportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ServicePage\ServicePage.xaml.cs">
+      <DependentUpon>ServicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Page Include="Dialog\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CommonBase.cs" />
+    <Compile Include="Common\IConfigureService.cs" />
+    <Compile Include="Common\NotifyBase.cs" />
+    <Compile Include="Dialog\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\CodeBlockPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CodeLibraryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CollectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FeedbackPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\GetYMSoftwarePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PaidSupportPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SettingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\StartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TeamPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ViewMorePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ServicePage\ServicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\CodeLibrary.cs" />
+    <Compile Include="Models\CommunityCollectModel.cs" />
+    <Compile Include="Models\LocalCollectModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\ViewEditedCodeModel.cs" />
+    <Compile Include="Pages\CollectPage.xaml.cs">
+      <DependentUpon>CollectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FeedbackPage.xaml.cs">
+      <DependentUpon>FeedbackPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GetYMSoftwarePage.xaml.cs">
+      <DependentUpon>GetYMSoftwarePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SettingPage.xaml.cs">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TeamPage.xaml.cs">
+      <DependentUpon>TeamPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewMorePage.xaml.cs">
+      <DependentUpon>ViewMorePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Assets\font\iconfont.ttf" />
+    <Resource Include="Assets\font\Orbitron-Medium.ttf" />
+    <Resource Include="Assets\font\Roboto-Light.ttf" />
+    <Resource Include="Assets\font\AlimamaDaoLiTi.ttf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\closeWin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\minWin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\maxWin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\feedback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\collect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\viewmore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\getymsoftware.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\codelibrary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\collected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\serverstorange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\programmdept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\exitlogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\accontman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\template.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ymsoft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="collectedcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\printcontent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\sharecontent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\addcodeblock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\addlibrary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CloudStorage\" />
+    <Folder Include="DataBase\" />
+    <Folder Include="JsonTools\" />
+    <Folder Include="Resource\CustomControl\" />
+    <Folder Include="Resource\Style\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\bigsupport.png" />
+    <Resource Include="Assets\icon\midumsupport.png" />
+    <Resource Include="Assets\icon\smallsupport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\fly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\nopaid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AvalonEdit">
+      <Version>6.3.0.90</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\setting_log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\setting_shortcutkey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\setting_storage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\setting_theme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\icon\setting_helper.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

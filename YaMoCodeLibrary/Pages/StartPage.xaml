@@ -164,15 +164,9 @@
                                 Style="{StaticResource BaseTextStyle}"
                                 Text="{Binding EditTime}" />
                         </UniformGrid>
-
-
-
-
-
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
         </Grid>
     </Border>
-
 </Page>

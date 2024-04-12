@@ -479,7 +479,7 @@
                             ItemContainerStyle="{StaticResource MyListBoxItemStyle}">
                             <ListBox.ItemsPanel>
                                 <ItemsPanelTemplate>
-                                    <StackPanel
+                                    <StackPanel 
                                         HorizontalAlignment="Left"
                                         VerticalAlignment="Top"
                                         Orientation="Vertical" />
@@ -489,7 +489,7 @@
                                 <DataTemplate>
                                     <StackPanel MouseLeftButtonUp="btn_OpenCodeLibrary" Orientation="Vertical">
                                         <StackPanel Orientation="Horizontal">
-                                            <Image
+                                            <Image 
                                                 Width="25"
                                                 Height="25"
                                                 Margin="2"
